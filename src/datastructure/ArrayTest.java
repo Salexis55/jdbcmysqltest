@@ -7,17 +7,14 @@ public class ArrayTest {
 		// = operador de establecer un valor a una variable
 		System.out.println(1 == 1);
 
-		
-		//create an array 
+		// create an array
 		int[] scores = { 12, 123123, 435 };
-		int sum = scores[0] + scores[1] + scores[2];
-		System.out.println("the total score is " + sum);
-		int totalscore = 0;
-		for (int i = 0; i < scores.length; i++) {
-			totalscore = scores[i] + totalscore;
-		}
-		System.out.println("the total score is " + totalscore);
-		
+		int[] nums = { 12, 123123, 435, 34 };
+
+		sumup(scores);
+		sumup(scores);
+		sumup(nums);
+
 		// Un array
 		User[] clients = new User[2];
 		// Store a user object at the first position of the array
@@ -46,5 +43,15 @@ public class ArrayTest {
 		System.out.println(users.length);
 		System.out.println(users[2]);
 
+	}
+
+	private static void sumup(int[] scores) {
+		int sum = scores[0] + scores[1] + scores[2];
+		System.out.println("the total score is " + sum);
+		int totalscore = 0;
+		for (int i = 0; i < scores.length; i++) {
+			totalscore = scores[i] + totalscore;
+		}
+		System.out.println("the total score is " + totalscore);
 	}
 }
