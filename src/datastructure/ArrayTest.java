@@ -1,4 +1,6 @@
 package datastructure;
+import java.util.Arrays;
+
 
 public class ArrayTest {
 
@@ -8,13 +10,25 @@ public class ArrayTest {
 		System.out.println(1 == 1);
 
 		// create an array
-		int[] scores = { 12, 123123, 435 };
-		int[] nums = { 12, 123123, 435, 34 };
+		int[] scores = { 12, 123, 435 };
+		// int[] nums = { 12, 123123, 435, 34 };
+
+		reverse(scores);
 
 		sumup(scores);
-		sumup(scores);
-		sumup(nums);
+		findMaxMin(scores);
+		switchValues(scores, 1, 4);
 
+	}
+
+	private static void reverse(int[] scores) {
+		
+
+	}
+	
+	
+	
+	private static void createObjeects() {
 		// Un array
 		User[] clients = new User[2];
 		// Store a user object at the first position of the array
@@ -42,6 +56,20 @@ public class ArrayTest {
 		User[] users = { new User(), new User(0, "amno", "pas", false, 0) };
 		System.out.println(users.length);
 		System.out.println(users[2]);
+	}
+
+
+	private static void switchValues(int[] arr, int i, int j) {
+
+		int num = arr[i];
+		arr[i] = arr[j];
+		arr[j] = num;
+		System.out.println(Arrays.toString(arr));
+
+	}
+
+	private static void findMaxMin(int[] scores) {
+		// TODO Auto-generated method stub
 
 	}
 
