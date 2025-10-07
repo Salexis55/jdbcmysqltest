@@ -9,14 +9,27 @@ public class SearchingTest {
 		String targetName = "Alejandro55";
 		System.out.println("Alejandro55" == targetName);
 
-		User[] clients = new User[20000];
+		User[] clients = new User[20000000];
 		for (int i = 0; i < clients.length; i++) {
 			clients[i] = new User(i, "Alejandro" + i, "pass" + i, false, 0);
 		}
 
+		
+		long startTime = System.currentTimeMillis();
 		searchWithOneThread(targetName, clients);
-
+		long endTime = System.currentTimeMillis();
+		System.out.println("el tiempo usado por el metodo con un solo hilo es " + (endTime - startTime));
+		
+		
+		startTime = System.currentTimeMillis();
 		searchingWitchMultipleThreads(targetName, clients);
+		endTime = System.currentTimeMillis();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		System.out.println("el tiempo por el metodo con multiples hilos es " + (endTime - startTime));
+		
 
 		for (int i = 0; i < clients.length; i++) {
 			if (clients[i].getUsername() == targetName) {
@@ -58,8 +71,8 @@ public class SearchingTest {
 	private static void searchWithOneThread(String targetName, User[] clients) {
 
 		for (int i = 0; i < clients.length; i++) {
-			if (clients[i].getUsername() == targetName) {
-				System.out.println("id of the user is " + clients[i]);
+			if (clients[i].getUsername().equals(targetName)) {
+				System.out.println("id of the user is " + clients[i].getId());
 			}
 
 		}

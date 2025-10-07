@@ -5,7 +5,36 @@ public class OperatorsTest {
 	public static void main(String[] args) {
 		
 		arithmeticOperations();
+		arithmeticOperations();
 		
+		logicalOperatorsTest();
+		
+		
+		
+	}
+
+	private static void logicalOperatorsTest() {
+		
+		System.out.println("operator or");
+		System.out.println(true || true);
+		System.out.println(true || false);
+		System.out.println(false|| true);
+		System.out.println(false|| false);
+
+		System.out.println("operator and");
+		System.out.println(true && true);
+		System.out.println(true && false);
+		System.out.println(false && true);
+		System.out.println(false && false);
+		
+		boolean eyeClosed = false;
+		boolean breathSlow = true;
+		if(eyeClosed && breathSlow) {
+			System.out.println("is sleeping");
+		}
+		else {
+			System.out.println("not sleeping");
+		}
 		
 	}
 

@@ -27,9 +27,9 @@ public class UserSearchingTask implements Runnable {
 		 * array
 		 */
 		for (int i = beginning; i < end; i++) {
-			if (clients[i].getUsername() == target) {
+			if (clients[i] != null && clients[i].getUsername().equals(target)) {
 				System.out.println("id of the user is " + clients[i].getId()); 
-
+				break;
 			}
 
 		}
