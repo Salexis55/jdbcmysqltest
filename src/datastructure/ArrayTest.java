@@ -16,13 +16,29 @@ public class ArrayTest {
 		reverse(scores);
 
 		sumup(scores);
+		
 		findMaxMin(scores);
+		
+		
 		switchValues(scores, 1, 4);
 
 	}
 
-	private static void reverse(int[] scores) {
+	private static void reverse(int[] arr) {
 		
+		//el proceso manual 
+		int temp = arr[0];
+		arr[0] = arr[arr.length - 1];
+		arr[arr.length - 1] = temp;
+		
+		temp = arr[0];
+		arr[1] = arr[arr.length - 1 - 1];
+		arr[arr.length - 1 - 1] = temp;
+		
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		} 
 
 	}
 	
